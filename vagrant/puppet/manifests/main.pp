@@ -16,6 +16,11 @@ class othertools {
         require => Exec["aptGetUpdate"]
     }
 
+    package { "vim":
+        ensure => latest,
+        require => Exec["aptGetUpdate"]
+    }
+
     package { "curl":
         ensure => present,
         require => Exec["aptGetUpdate"]
